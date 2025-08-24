@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorteio de Times</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="Logo do Time" class="logo">
+    <h1>Racha do REDBULL</h1>
+
+    <div class="card">
+      <label for="jogadores">Lista de jogadores (um por linha):</label>
+      <textarea id="jogadores" rows="8" placeholder="Digite os nomes aqui..."></textarea>
+    </div>
+
+    <div class="card">
+      <label for="qtd">Jogadores por time:</label>
+      <select id="qtd">
+        <option value="4">4</option>
+        <option value="5" selected>5</option>
+        <option value="7">7</option>
+        <option value="11">11</option>
+      </select>
+    </div>
+
+    <button id="sortear">Sortear</button>
+
+    <div class="card" id="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
