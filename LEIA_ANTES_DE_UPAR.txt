@@ -1,0 +1,41 @@
+RB PORTEIRAS - PÁGINA DE DOWNLOAD
+
+ANTES DE ENVIAR AO GITHUB:
+
+1. Copie o APK gerado pelo Flutter:
+   build\app\outputs\flutter-apk\app-release.apk
+
+2. Cole o arquivo dentro da pasta:
+   downloads
+
+3. Renomeie o APK exatamente para:
+   RB-PORTEIRAS.apk
+
+4. Apague o arquivo:
+   downloads\COLOQUE_O_APK_AQUI.txt
+
+5. No repositório SORTEIO-TIMES, apague os arquivos antigos do PWA.
+
+6. Envie o CONTEÚDO desta pasta para a raiz do repositório. O index.html deve
+   ficar na raiz, e não dentro de outra pasta.
+
+ESTRUTURA FINAL NO GITHUB:
+
+index.html
+style.css
+logo.png
+service-worker.js
+sw.js
+.nojekyll
+downloads\RB-PORTEIRAS.apk
+
+O botão da página baixará diretamente:
+downloads\RB-PORTEIRAS.apk
+
+ENDEREÇO DA PÁGINA:
+https://welison-acs.github.io/SORTEIO-TIMES/
+
+OBSERVAÇÃO:
+Os arquivos service-worker.js e sw.js servem apenas para desativar e limpar o
+cache do PWA antigo, independentemente do nome usado anteriormente. A nova
+página não instala PWA e não mantém cache próprio.

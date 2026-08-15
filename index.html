@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#525d76" />
+    <meta name="description" content="Download do aplicativo RB Porteiras." />
+    <title>RB Porteiras</title>
+    <link rel="icon" type="image/png" href="./logo.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="download-page">
+      <img
+        class="team-logo"
+        src="./logo.png"
+        alt="Escudo do RB Porteiras"
+        width="320"
+        height="320"
+      />
+
+      <a
+        class="download-button"
+        href="./downloads/RB-PORTEIRAS.apk"
+        download="RB-PORTEIRAS.apk"
+        aria-label="Baixar aplicativo RB Porteiras"
+      >
+        <span>DOWNLOAD</span>
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M32 7v31m0 0L20 26m12 12 12-12M12 42v8a7 7 0 0 0 7 7h26a7 7 0 0 0 7-7v-8" />
+        </svg>
+      </a>
+    </main>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then((registrations) => {
+          registrations.forEach((registration) => registration.unregister());
+        });
+      }
+
+      if ('caches' in window) {
+        caches.keys().then((names) => {
+          names.forEach((name) => caches.delete(name));
+        });
+      }
+    </script>
+  </body>
+</html>

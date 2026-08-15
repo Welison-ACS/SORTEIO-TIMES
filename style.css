@@ -1,0 +1,110 @@
+:root {
+  color-scheme: dark;
+  --background-top: #59647d;
+  --background-bottom: #48536d;
+  --navy: #04143a;
+  --red: #e4002b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background: linear-gradient(160deg, var(--background-top), var(--background-bottom));
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.download-page {
+  width: 100%;
+  min-height: 100svh;
+  padding: max(32px, env(safe-area-inset-top)) 24px max(32px, env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(52px, 10vh, 92px);
+}
+
+.team-logo {
+  display: block;
+  width: clamp(170px, 36vw, 260px);
+  height: auto;
+  border-radius: 20%;
+  filter: drop-shadow(0 18px 20px rgb(2 12 34 / 32%));
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.download-button {
+  width: min(100%, 310px);
+  min-height: 112px;
+  padding: 16px 24px 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid rgb(255 255 255 / 6%);
+  border-radius: 22px;
+  background: var(--navy);
+  color: var(--red);
+  box-shadow: 0 18px 32px rgb(2 12 34 / 28%);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+}
+
+.download-button span {
+  font-size: clamp(29px, 7vw, 38px);
+  line-height: 1;
+  font-weight: 950;
+  letter-spacing: -1px;
+}
+
+.download-button svg {
+  width: 47px;
+  height: 47px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.download-button:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 22px 38px rgb(2 12 34 / 36%);
+  transform: translateY(-3px);
+}
+
+.download-button:active {
+  transform: translateY(1px) scale(.985);
+}
+
+.download-button:focus-visible {
+  outline: 4px solid rgb(255 255 255 / 80%);
+  outline-offset: 5px;
+}
+
+@media (max-height: 560px) {
+  .download-page {
+    gap: 32px;
+  }
+
+  .team-logo {
+    width: 145px;
+  }
+
+  .download-button {
+    min-height: 96px;
+  }
+}
